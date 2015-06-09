@@ -1,4 +1,4 @@
-package com.noobs2d.utils.framework;
+package com.noobs2d.utils.core;
 
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -6,11 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 
-import com.noobs2d.noobandroid.R;
-
 /**
- * @see ScreenController
  * @author Julious Igmen
+ * @see ScreenController
  */
 public class ScreenControllerImpl implements ScreenController {
 
@@ -39,7 +37,8 @@ public class ScreenControllerImpl implements ScreenController {
 
     @Override
     public void removeTopScreen() {
-        fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        int idOfScreenToPop = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 1).getId();
+        fragmentManager.popBackStack(idOfScreenToPop, FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 
     @Override
@@ -97,23 +96,13 @@ public class ScreenControllerImpl implements ScreenController {
 
     @Override
     public void onBackStackChanged() {
-        boolean hasStackedScreens = fragmentManager.getBackStackEntryCount() > 0;
-        if (hasStackedScreens) {
-            setUpArrowEnabled(true);
-        } else {
-            setUpArrowEnabled(false);
-        }
+        setArrowVisible();
     }
 
-    private void setUpArrowEnabled(boolean enabled) {
-        actionBar.setDisplayHomeAsUpEnabled(enabled);
-        actionBar.setHomeButtonEnabled(enabled);
-
-        if (enabled) {
-            actionBar.setHomeAsUpIndicator(R.mipmap.ic_action_back);
-        } else {
-            actionBar.setHomeAsUpIndicator(null);
-        }
+    private void setArrowVisible() {
+        boolean hasStackedScreens = fragmentManager.getBackStackEntryCount() > 0;
+        actionBar.setDisplayHomeAsUpEnabled(hasStackedScreens);
+        actionBar.setHomeButtonEnabled(hasStackedScreens);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.noobs2d.utils.framework;
+package com.noobs2d.utils.core;
 
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
