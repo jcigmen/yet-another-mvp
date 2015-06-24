@@ -1,11 +1,11 @@
-package com.noobs2d.utils;
+package com.noobs2d.android.yamvp;
 
 import android.content.Context;
 import android.content.Intent;
 import android.test.ActivityUnitTestCase;
 import android.test.RenamingDelegatingContext;
 
-import com.noobs2d.utils.TestActivity;
+import com.noobs2d.utils.R;
 
 /**
  * @author Julious Igmen

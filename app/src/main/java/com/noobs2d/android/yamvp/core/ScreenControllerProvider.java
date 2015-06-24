@@ -1,4 +1,4 @@
-package com.noobs2d.utils.core;
+package com.noobs2d.android.yamvp.core;
 
 /**
  * @author Julious Igmen

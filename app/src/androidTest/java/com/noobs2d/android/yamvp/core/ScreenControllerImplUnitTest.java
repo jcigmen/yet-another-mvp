@@ -1,9 +1,7 @@
-package com.noobs2d.utils.core;
+package com.noobs2d.android.yamvp.core;
 
-import android.util.Log;
-
-import com.noobs2d.utils.TestActivity;
-import com.noobs2d.utils.UnitTest;
+import com.noobs2d.android.yamvp.TestActivity;
+import com.noobs2d.android.yamvp.UnitTest;
 
 /**
  * @author Julious Igmen

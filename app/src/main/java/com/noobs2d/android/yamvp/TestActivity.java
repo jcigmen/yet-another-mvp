@@ -1,12 +1,11 @@
-package com.noobs2d.utils;
+package com.noobs2d.android.yamvp;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.noobs2d.utils.core.ScreenController;
-import com.noobs2d.utils.core.ScreenControllerImpl;
-import com.noobs2d.utils.core.ScreenControllerProvider;
+import com.noobs2d.android.yamvp.core.ScreenController;
+import com.noobs2d.android.yamvp.core.ScreenControllerImpl;
+import com.noobs2d.android.yamvp.core.ScreenControllerProvider;
 
 /**
  * For the sole purpose of unit testing.

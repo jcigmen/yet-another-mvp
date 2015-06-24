@@ -1,4 +1,4 @@
-package com.noobs2d.utils;
+package com.noobs2d.android.yamvp;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;

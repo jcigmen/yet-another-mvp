@@ -1,4 +1,4 @@
-package com.noobs2d.utils.core;
+package com.noobs2d.android.yamvp.core;
 
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
